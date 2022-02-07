@@ -1,0 +1,261 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//General Stuff:
+
+//Buttons:
+.buttons-flex{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+button{
+    border: 0;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5em 0.8em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+//Media Query For Mobile:
+@media screen and (min-device-width:100px) and
+(max-device-width : 480px)
+{
+    header{
+        span{
+            color: red;
+        }
+        .screen-sm{
+            display: flex;
+            justify-content: space-between;
+            margin: 0em 2em;
+            .nav-sm-item{
+                width: 3em;
+                height: 3em;
+                margin-top: 0.8em;
+            }
+        }
+        //Large Navbar should'nt display on Small Screens
+        .screen-lg{
+            display: none;
+        }
+
+        .hero-lg{
+            .flex-area{
+                display: flex;
+                justify-content: space-between;
+                margin: 0em 1em;
+                h1{
+                    font-size: 1.9rem;
+                }
+                img{
+                    width: 45vw;
+                }
+            }
+        }
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        .neumorphism-box{
+            border: 1px solid white;
+            margin-bottom: 3em;
+            margin-left: 1em;
+            width: 25em;
+            height: 25em;
+            background: #ffffff;
+            box-shadow:  20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+        }
+        h2{
+            color: red;
+        }
+    }
+
+    .icons-flex{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        img{
+            max-width: 5em;
+            max-height: 3em;
+        }
+    }
+    
+}
+
+//Tablets,Ipads: 
+   @media screen and (min-device-width:481px) and (max-device-width:800px){
+    header{
+        span{
+            color: red;
+        }
+        .screen-sm{
+           display: none;
+        }
+        //Large Navbar should'nt display on Small Screens
+        .screen-lg{
+            display: flex;
+            justify-content: space-between;
+            margin: 0em 2em;
+            .nav-sm-item{
+                width: 3em;
+                height: 3em;
+                margin-top: 0.8em;
+            }
+            ul{
+                display: flex;
+                li{
+                    padding: 0em 0.5em;
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        &:hover{
+                            border-bottom: 3px solid red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero-lg{
+            .flex-area{
+                display: flex;
+                justify-content: space-between;
+                margin: 0em 1em;
+                h1{
+                    font-size: 1.9rem;
+                }
+                img{
+                    width: 45vw;
+                }
+            }
+
+           
+        }
+    }
+
+    .features{
+        display: flex;
+        flex-direction: column;
+        .neumorphism-box{
+            border: 1px solid white;
+            margin: 0em 10em 3em 10em;
+            width: 35em;
+            height: 20em;
+            background: #ffffff;
+            box-shadow:  20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+        }
+        h2{
+            color: red;
+        }
+    }
+    .icons-flex{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        img{
+            max-width: 8em;
+            max-height: 5em;
+        }
+    }
+    
+   }
+
+
+//Normal Web Design(Large Screens):
+@media screen and (min-device-width:901px) {
+    header{
+        height: 100vh;
+        span{
+            color: red;
+        }
+        .screen-sm{
+            display: none;
+        }
+        .screen-lg{
+            display: flex;
+            justify-content: space-between;
+            margin: 0em 3em;
+            .nav-sm-item{
+                width: 3em;
+                height: 3em;
+                margin-top: 0.8em;
+            }
+            ul{
+                display: flex;
+                li{
+                    padding: 0em 0.5em;
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        &:hover{
+                            border-bottom: 3px solid red;
+                        }
+                    }
+                }
+            }
+        }
+    
+        //Hero Section:
+        .hero-lg{
+            .flex-area{
+                display: flex;
+                justify-content: space-between;
+                margin: 0em 3em;
+                h1{
+                    font-size: 4.9rem;
+                }
+                img{
+                    width: 45vw;
+                }
+            }
+        }
+    }
+
+    .features{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .neumorphism-box{
+            border: 1px solid white;
+            width: 30em;
+            height: 20em;
+            background: #ffffff;
+            box-shadow:  20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+        }
+        h2{
+            color: red;
+        }
+    }
+
+    .icons-flex{
+        display: flex;
+        justify-content: space-around;
+
+        img{
+            max-width: 8em;
+            max-height: 5em;
+        }
+    }
+}
+
+//Utilities
+.text-center{
+    text-align: center;
+}
